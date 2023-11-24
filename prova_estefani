@@ -6,6 +6,10 @@ id int(11) PRIMARY KEY NOT NULL auto_increment,
     nome VARCHAR(4000)not null
 );
 
+SET SQL_MODE="";
+
+SET SQL_MODE='STRICT_ALL_TABLES';
+
 CREATE TABLE unidade_requisitante (
   id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   unidade VARCHAR(500) NOT NULL UNIQUE
@@ -17,10 +21,6 @@ alter table unidade_requisitante add constraint id_fk_pessoa
 foreign key(id) references pessoa (id);
 
 
-
-  
-SET SQL_MODE="";
-SET SQL_MODE='STRICT_ALL_TABLES';
 
 select count(*) FROM unidade_requisitante;
 
